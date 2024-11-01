@@ -51,7 +51,9 @@ local default_request_bodies = {
     temperature = 0.2,
     top_p = 0.95,
   },
-  llamacpp = {},
+  llamacpp = {
+    temperature = 0.2
+  },
 }
 
 local M = {
