@@ -5,22 +5,6 @@ local M = {
   setup_done = false,
 }
 
-function M.accept_suggestion()
-  if not completion.suggestion then
-    return
-  end
-  vim.schedule(completion.complete)
-end
-
-function M.dismiss_suggestion()
-  if not completion.suggestion then
-    return
-  end
-  vim.schedule(function()
-    completion.cancel()
-    completion.suggestion = nil
-  end)
-end
 
 function M.setup()
   if M.setup_done then
